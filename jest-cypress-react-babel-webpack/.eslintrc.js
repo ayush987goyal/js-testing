@@ -8,6 +8,10 @@ module.exports = {
     'plugin:jest/recommended',
     'kentcdodds/react',
   ],
+  plugins: ['eslint-plugin-cypress'],
+  env: {
+    'cypress/globals': true,
+  },
   rules: {
     // https://github.com/benmosher/eslint-plugin-import/issues/1446
     'import/named': 'off',
