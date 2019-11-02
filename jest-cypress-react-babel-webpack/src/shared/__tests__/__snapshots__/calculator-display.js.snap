@@ -1,17 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`mounts 1`] = `
-<div>
+<div
+  class="css-lq9ahq-calculator-display--CalculatorDisplay"
+>
   <div
-    class="css-lq9ahq-calculator-display--CalculatorDisplay"
+    class="autoScalingText"
+    data-testid="total"
+    style="transform: scale(1,1);"
   >
-    <div
-      class="autoScalingText"
-      data-testid="total"
-      style="transform: scale(1,1);"
-    >
-      0
-    </div>
+    0
   </div>
 </div>
 `;
