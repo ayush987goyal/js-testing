@@ -15,6 +15,7 @@
     "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|json|css|html|md)\"",
     "lint": "jest --config test/jest.lint.js",
     "validate": "npm run test && npm run build",
+    "precommit": "lint-staged",
     "setup": "npm install && npm run validate"
   },
   "keywords": [],
@@ -38,6 +39,7 @@
     "eslint-import-resolver-jest": "^3.0.0",
     "eslint-plugin-jest": "^23.0.2",
     "file-loader": "^4.2.0",
+    "husky": "^3.0.9",
     "identity-obj-proxy": "^3.0.0",
     "is-ci-cli": "^2.0.0",
     "jest": "^24.9.0",
@@ -45,6 +47,7 @@
     "jest-runner-eslint": "^0.7.5",
     "jest-watch-select-projects": "^1.0.0",
     "jest-watch-typeahead": "^0.4.0",
+    "lint-staged": "^9.4.2",
     "prettier": "^1.18.2",
     "prop-types": "^15.6.2",
     "serve": "^11.1.0",
