@@ -15,8 +15,7 @@ module.exports = {
       },
     ],
   ],
-  plugins: [
-    '@babel/plugin-transform-runtime',
-    isTest ? 'babel-plugin-dynamic-import-node' : null,
-  ],
+  plugins: isTest
+    ? ['@babel/plugin-transform-runtime', 'babel-plugin-dynamic-import-node']
+    : ['@babel/plugin-transform-runtime'],
 }
