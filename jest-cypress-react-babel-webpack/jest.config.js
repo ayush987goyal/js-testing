@@ -12,7 +12,20 @@ module.exports = {
     '\\.module\\.css$': 'identity-obj-proxy',
     '\\.css$': require.resolve('./test/style-mock.js'),
   },
-  // after jest is loaded
   setupFilesAfterEnv: [require.resolve('./test/setup-tests.js')],
   collectCoverageFrom: ['**/src/**/*.js'],
+  coverageThreshold: {
+    global: {
+      statements: 17,
+      branches: 4,
+      lines: 17,
+      functions: 18,
+    },
+    './src/shared/utils.js': {
+      statements: 100,
+      branches: 80,
+      lines: 100,
+      functions: 100,
+    },
+  },
 }
