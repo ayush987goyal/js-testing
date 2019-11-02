@@ -1,7 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import CalculatorDisplay from 'calculator-display'
+// import CalculatorDisplay from 'calculator-display'
 import styles from './calculator.module.css'
+
+const CalculatorDisplay = React.lazy(() => import('calculator-display'))
 
 function CalculatorKey({className = '', ...props}) {
   return (
