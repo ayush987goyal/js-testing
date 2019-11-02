@@ -4,8 +4,9 @@ module.exports = {
   extends: [
     'kentcdodds',
     'kentcdodds/import',
-    'kentcdodds/jest',
+    // 'kentcdodds/jest',
     'kentcdodds/react',
+    'plugin:jest/recommended',
   ],
   rules: {
     // https://github.com/benmosher/eslint-plugin-import/issues/1446
