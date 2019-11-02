@@ -5,12 +5,13 @@ module.exports = {
     'kentcdodds',
     'kentcdodds/import',
     // 'kentcdodds/jest',
-    'kentcdodds/react',
     'plugin:jest/recommended',
+    'kentcdodds/react',
   ],
   rules: {
     // https://github.com/benmosher/eslint-plugin-import/issues/1446
     'import/named': 'off',
+    'jest/expect-expect': 'off',
   },
   settings: {'import/resolver': 'node'},
   overrides: [

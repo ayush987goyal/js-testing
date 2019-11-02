@@ -1080,6 +1080,18 @@
     "@types/istanbul-lib-coverage" "*"
     "@types/istanbul-lib-report" "*"
 
+"@types/jest-diff@*":
+  version "20.0.1"
+  resolved "https://registry.yarnpkg.com/@types/jest-diff/-/jest-diff-20.0.1.tgz#35cc15b9c4f30a18ef21852e255fdb02f6d59b89"
+  integrity sha512-yALhelO3i0hqZwhjtcr6dYyaLoCHbAMshwtj6cGxTvHZAKXHsYGdff6E8EPw3xLKY0ELUTQ69Q1rQiJENnccMA==
+
+"@types/jest@^24.0.21":
+  version "24.0.21"
+  resolved "https://registry.yarnpkg.com/@types/jest/-/jest-24.0.21.tgz#2c0a25440e025bb265f4a17d8b79b11b231426bf"
+  integrity sha512-uyqFvx78Tuy0h5iLCPWRCvi5HhWwEqhIj30doitp191oYLqlCxUyAJHdWVm5+Nr271/vPnkyt6rWeEIjGowBTg==
+  dependencies:
+    "@types/jest-diff" "*"
+
 "@types/json-schema@^7.0.3":
   version "7.0.3"
   resolved "https://registry.yarnpkg.com/@types/json-schema/-/json-schema-7.0.3.tgz#bdfd69d61e464dcc81b25159c270d75a73c1a636"
@@ -3092,7 +3104,7 @@ eslint-visitor-keys@^1.0.0, eslint-visitor-keys@^1.1.0:
   resolved "https://registry.yarnpkg.com/eslint-visitor-keys/-/eslint-visitor-keys-1.1.0.tgz#e2a82cea84ff246ad6fb57f9bde5b46621459ec2"
   integrity sha512-8y9YjtM1JBJU/A9Kc+SbaOV4y29sSWckBwMHa+FGtVj5gN/sbnKDf6xJUl+8g7FAij9LVaP8C24DUiH/f/2Z9A==
 
-eslint@^6.2.2:
+eslint@^6.6.0:
   version "6.6.0"
   resolved "https://registry.yarnpkg.com/eslint/-/eslint-6.6.0.tgz#4a01a2fb48d32aacef5530ee9c5a78f11a8afd04"
   integrity sha512-PpEBq7b6qY/qrOmpYQ/jTMDYfuQMELR4g4WI1M/NaSDDD/bdcMb+dj4Hgks7p41kW2caXsPsEZAEAyAgjVVC0g==
