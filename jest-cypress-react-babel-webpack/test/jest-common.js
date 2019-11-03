@@ -1,3 +1,5 @@
+// common project configuration used by the other configs
+
 const path = require('path')
 
 module.exports = {
@@ -8,11 +10,13 @@ module.exports = {
     'shared',
     __dirname,
   ],
+  testPathIgnorePatterns: ['<rootDir>/server/'],
   moduleNameMapper: {
+    // module must come first
     '\\.module\\.css$': 'identity-obj-proxy',
     '\\.css$': require.resolve('./style-mock.js'),
+    // can also map files that are loaded by webpack with the file-loader
   },
-  collectCoverageFrom: ['**/src/**/*.js'],
   watchPlugins: [
     'jest-watch-typeahead/filename',
     'jest-watch-typeahead/testname',

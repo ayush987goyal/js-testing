@@ -16,6 +16,7 @@ module.exports = {
     // https://github.com/benmosher/eslint-plugin-import/issues/1446
     'import/named': 'off',
     'jest/expect-expect': 'off',
+    'jest/no-test-callback': 'off',
   },
   settings: {'import/resolver': 'node'},
   overrides: [
