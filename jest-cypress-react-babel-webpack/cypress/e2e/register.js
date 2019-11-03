@@ -18,5 +18,22 @@ describe('registration', () => {
       .window()
       .its('localStorage.token')
       .should('be.a', 'string')
+      .findByTestId('username-display')
+      .should('have.text', user.username)
+  })
+
+  it.only(`should show an error message if there's an error`, () => {
+    cy.server()
+    cy.route({
+      method: 'POST',
+      url: 'http://localhost:3000/register',
+      status: 500,
+      response: {},
+    })
+
+    cy.visit('/register')
+      .findByText(/submit/i)
+      .click()
+      .findByText(/error.*try again/i)
   })
 })
