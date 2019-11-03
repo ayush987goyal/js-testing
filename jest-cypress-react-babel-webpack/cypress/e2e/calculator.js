@@ -13,3 +13,16 @@ describe('anonymous calculator', () => {
       .should('have.text', '3')
   })
 })
+
+describe('authenticated calculator', () => {
+  it('displays the username', () => {
+    cy.loginAsNewUser().then(user => {
+      cy.visit('/')
+        .assertLoggedInAs(user)
+        .findByText(/logout/i)
+        .click()
+        .queryByTestId('username-display', {timeout: 300})
+        .should('not.exist')
+    })
+  })
+})
