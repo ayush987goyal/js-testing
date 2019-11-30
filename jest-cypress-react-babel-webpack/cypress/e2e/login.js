@@ -10,7 +10,6 @@ describe('login', () => {
         .type(user.password)
         .findByText(/submit/i)
         .click()
-
         .assertHome()
         .assertLoggedInAs(user)
     })

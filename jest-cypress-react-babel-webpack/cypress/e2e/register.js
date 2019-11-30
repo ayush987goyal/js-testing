@@ -1,9 +1,8 @@
-import {buildUser} from '../support/generate'
+import {userBuilder} from '../support/generate'
 
 describe('registration', () => {
   it('should register a new user', () => {
-    const user = buildUser()
-
+    const user = userBuilder()
     cy.visit('/')
       .findByText(/register/i)
       .click()
@@ -17,7 +16,7 @@ describe('registration', () => {
       .assertLoggedInAs(user)
   })
 
-  it.only(`should show an error message if there's an error`, () => {
+  it(`should show an error message if there's an error registering`, () => {
     cy.server()
     cy.route({
       method: 'POST',
@@ -25,7 +24,6 @@ describe('registration', () => {
       status: 500,
       response: {},
     })
-
     cy.visit('/register')
       .findByText(/submit/i)
       .click()

@@ -1,5 +1,5 @@
-const isProd = String(process.env.NODE_ENV) === 'production'
 const isTest = String(process.env.NODE_ENV) === 'test'
+const isProd = String(process.env.NODE_ENV) === 'production'
 
 module.exports = {
   presets: [
@@ -15,7 +15,5 @@ module.exports = {
       },
     ],
   ],
-  plugins: isTest
-    ? ['@babel/plugin-transform-runtime', 'babel-plugin-dynamic-import-node']
-    : ['@babel/plugin-transform-runtime'],
+  plugins: ['@babel/plugin-transform-runtime'],
 }

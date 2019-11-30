@@ -18,7 +18,8 @@ describe('authenticated calculator', () => {
   it('displays the username', () => {
     cy.loginAsNewUser().then(user => {
       cy.visit('/')
-        .assertLoggedInAs(user)
+        .findByTestId('username-display')
+        .should('have.text', user.username)
         .findByText(/logout/i)
         .click()
         .queryByTestId('username-display', {timeout: 300})

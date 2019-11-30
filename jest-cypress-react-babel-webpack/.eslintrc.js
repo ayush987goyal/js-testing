@@ -4,19 +4,12 @@ module.exports = {
   extends: [
     'kentcdodds',
     'kentcdodds/import',
-    // 'kentcdodds/jest',
-    'plugin:jest/recommended',
+    'kentcdodds/jest',
     'kentcdodds/react',
   ],
-  plugins: ['eslint-plugin-cypress'],
-  env: {
-    'cypress/globals': true,
-  },
   rules: {
     // https://github.com/benmosher/eslint-plugin-import/issues/1446
     'import/named': 'off',
-    'jest/expect-expect': 'off',
-    'jest/no-test-callback': 'off',
   },
   settings: {'import/resolver': 'node'},
   overrides: [
