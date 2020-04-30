@@ -16,7 +16,7 @@
     "backbone": "^1.4.0",
     "from-html": "^0.3.3",
     "hyperapp": "^1.2.10",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "knockout": "^3.5.0",
     "mithril": "^2.0.3",
     "preact": "^8.4.2",
